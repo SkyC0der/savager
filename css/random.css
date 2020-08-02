@@ -5,6 +5,8 @@
 body{
     font-family: 'Mulish', sans-serif;
     background-color: #ccc;
+    color: #0c0e0c;
+    font-size: 1rem;
 }
 html, body{
     overflow-x: hidden;
@@ -12,7 +14,9 @@ html, body{
 h1{
     color: #157fbc;
 }
-
+h5{
+    color: #0c0e0c;
+}
 .container {
     height: calc(100% - 15px);
 }
@@ -23,7 +27,10 @@ h1{
     height: 80px;
 }
 .card{
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.04);
+
+    -webkit-box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.04);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px rgba(0, 0, 0, 0.04);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px rgba(0, 0, 0, 0.04);
 }
 .fa-random{
     font-size: 2rem;
@@ -34,10 +41,16 @@ h1{
 blockquote p,.card-body p{
     color: #0c0e0c;
 }
+.card-text{
+    text-align: left;
+}
 @media (min-width: 576px){
 .card-columns {
     column-count: 1;
     column-gap: 1.3rem;
+}
+.card-footer i {
+    font-size: 1.2em;
 }
 }
 
@@ -46,17 +59,17 @@ blockquote p,.card-body p{
     font-size: .9rem;
     }
     .list-group-item{
-        padding: .75rem;
+        padding: 1rem;
     }
     #profile{
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         margin-top: 0 !important;
         margin-left: 0 !important;
         padding: 1rem ;
         text-align: left;
     }
     #profile > div.ml-5{
-        margin-left: 0rem !important;
-        margin-top: 1rem;
+        margin-left: 1rem !important;
     }
 }
